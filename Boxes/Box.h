@@ -18,4 +18,6 @@
 
 -(float)volume;
 
+-(int)numberOfFitsInside:(Box *)otherBox;
+
 @end

@@ -26,4 +26,12 @@
     return self.height * self.width * self.depth;
 }
 
+-(int)numberOfFitsInside:(Box *)otherBox {
+    if (self.volume < otherBox.volume) {
+        return otherBox.volume / self.volume;
+    } else {
+        return self.volume / otherBox.volume;
+    }
+}
+
 @end
