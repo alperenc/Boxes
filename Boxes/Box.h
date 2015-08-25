@@ -13,6 +13,7 @@
 @property (nonatomic, assign) float height;
 @property (nonatomic, assign) float width;
 @property (nonatomic, assign) float depth;
+@property (nonatomic, strong) NSString *name;
 
 -(instancetype)initWithHeight:(float)aHeight Width:(float)aWidth Depth:(float)aDepth;
 

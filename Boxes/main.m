@@ -13,16 +13,14 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         Box *box = [[Box alloc] initWithHeight:10.0 Width:10.0 Depth:10.0];
+        box.name = @"Box 1";
         NSLog(@"The volume of the box is %.2f", [box volume]);
         
-        Box *otherBox = [[Box alloc] initWithHeight:5.0 Width:5.0 Depth:10.0];
+        Box *otherBox = [[Box alloc] initWithHeight:20.0 Width:20.0 Depth:10.0];
+        otherBox.name = @"Box 2";
         NSLog(@"The volume of the box is %.2f", [otherBox volume]);
         
-        if ([box volume] > [otherBox volume]) {
-            NSLog(@"The second box fits %d times inside the first one.", [box numberOfFitsInside:otherBox]);
-        } else {
-            NSLog(@"The first box fits %d times inside the second one.", [box numberOfFitsInside:otherBox]);
-        }
+        NSLog(@"%@ fits %d times inside %@.", ([box volume] > [otherBox volume])? otherBox.name : box.name, [box numberOfFitsInside:otherBox], ([box volume] < [otherBox volume])? otherBox.name : box.name);
         
     }
     return 0;
