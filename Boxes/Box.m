@@ -27,11 +27,16 @@
 }
 
 -(int)numberOfFitsInside:(Box *)otherBox {
+    int fits = 1;
     if (self.volume < otherBox.volume) {
-        return otherBox.volume / self.volume;
+        fits = otherBox.volume / self.volume;
+        NSLog(@"The first box fits %d times inside the second.", fits);
     } else {
-        return self.volume / otherBox.volume;
+        fits = self.volume / otherBox.volume;
+        NSLog(@"The second box fits %d times inside the first.", fits);
     }
+    
+    return fits;
 }
 
 @end
