@@ -14,7 +14,7 @@
 @property (nonatomic, assign) float width;
 @property (nonatomic, assign) float depth;
 
--(instancetype)initWithHeight:(float)aHeight Width:(float)aWidth Depth:(float)aDepth;
+-(instancetype)initWithHeight:(float)aHeight width:(float)aWidth depth:(float)aDepth;
 
 -(float)volume;
 

@@ -10,7 +10,7 @@
 
 @implementation Box
 
--(instancetype)initWithHeight:(float)aHeight Width:(float)aWidth Depth:(float)aDepth {
+-(instancetype)initWithHeight:(float)aHeight width:(float)aWidth depth:(float)aDepth {
     self = [super init];
     
     if (self) {

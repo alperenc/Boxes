@@ -12,10 +12,10 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Box *box = [[Box alloc] initWithHeight:10.0 Width:10.0 Depth:10.0];
+        Box *box = [[Box alloc] initWithHeight:10.0 width:10.0 depth:10.0];
         NSLog(@"The volume of the box is %.2f", [box volume]);
         
-        Box *otherBox = [[Box alloc] initWithHeight:5.0 Width:5.0 Depth:10.0];
+        Box *otherBox = [[Box alloc] initWithHeight:5.0 width:5.0 depth:10.0];
         NSLog(@"The volume of the box is %.2f", [otherBox volume]);
         
         if ([box volume] > [otherBox volume]) {
